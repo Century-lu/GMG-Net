@@ -153,7 +153,7 @@ Runtime is reported on an RTX 4090D with 256 x 256 input, averaged over 300 repe
 
 ## Weights
 
-All the weights that we trained on different datasets is available at [Baidu Pan](https://pan.baidu.com/s/1MyeWvcsSjFQRgwAIBYpzJw?pwd=lsjh) (code: `lsjh`).
+All the weights that we trained on different datasets is available at [Baidu Pan](https://pan.baidu.com/s/1JGIEmbJsFnMvOuRXCN8Fiw?pwd=lsjh) (code: `lsjh`).
 
 ## Requirements
 
