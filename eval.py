@@ -30,7 +30,7 @@ eval_parser.add_argument('--NPE', action='store_true', help='output NPE dataset'
 eval_parser.add_argument('--VV', action='store_true', help='output VV dataset')
 eval_parser.add_argument('--alpha', type=float, default=1.0)
 eval_parser.add_argument('--gamma', type=float, default=1.0)
-eval_parser.add_argument('--unpaired_weights', type=str, default='./weights/LOLv2_syn/w_perc.pth')
+eval_parser.add_argument('--unpaired_weights', type=str, default='./weights/LOL_V2_Syn.pth')
 
 ep = eval_parser.parse_args()
 
@@ -91,32 +91,19 @@ if __name__ == '__main__':
     if ep.lol:
         eval_data = DataLoader(dataset=get_eval_set("./datasets/LOLdataset/eval15/low"), num_workers=num_workers, batch_size=1, shuffle=False)
         output_folder = './output/lolv1/'
-        # if ep.perc:
-        weight_path = './weights/V1原模型epoch_560.pth'
-        # else:
-        #     weight_path = './weights/LOLv1/wo_perc.pth'
+        weight_path = './weights/LOL_V1.pth'
         
             
     elif ep.lol_v2_real:
         eval_data = DataLoader(dataset=get_eval_set("./datasets/LOLv2/Real_captured/Test/Low"), num_workers=num_workers, batch_size=1, shuffle=False)
         output_folder = './output/LOLv2_real/'
-        # if ep.best_GT_mean:
-        #     weight_path = './weights/LOLv2_real/w_perc.pth'
-        #     alpha = 0.84
-        # elif ep.best_PSNR:
-        weight_path = './weights/v2_real-原模型epoch_595.pth'
+        weight_path = './weights/LOL_V2_Real.pth'
         alpha = 0.8
-        # elif ep.best_SSIM:
-        #     weight_path = './weights/LOLv2_real/best_SSIM.pth'
-        #     alpha = 0.82
             
     elif ep.lol_v2_syn:
         eval_data = DataLoader(dataset=get_eval_set("./datasets/LOLv2/Synthetic/Test/Low"), num_workers=num_workers, batch_size=1, shuffle=False)
         output_folder = './output/LOLv2_syn/'
-        # if ep.perc:
-        #     weight_path = './weights/LOLv2_syn/w_perc.pth'
-        # else:
-        weight_path = 'weights/v2_syn_yuan_epoch_470.pth'
+        weight_path = 'weights/LOL_V2_Syn.pth'
             
     elif ep.SICE_grad:
         eval_data = DataLoader(dataset=get_SICE_eval_set("./datasets/SICE/SICE_Grad"), num_workers=num_workers, batch_size=1, shuffle=False)
@@ -151,7 +138,7 @@ if __name__ == '__main__':
             output_folder = './output/custome/'
         alpha = ep.alpha
         norm_size = False
-        weight_path = './weights/v2_syn_yuan_epoch_470.pth'
+        weight_path = './weights/LOL_V2_Syn.pth'
         
     eval_net = CIDNet().cuda()
     eval(eval_net, eval_data, weight_path, output_folder,norm_size=norm_size,LOL=ep.lol,v2=ep.lol_v2_real,unpaired=ep.unpaired,alpha=alpha,gamma=ep.gamma)
