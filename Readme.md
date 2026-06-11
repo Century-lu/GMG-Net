@@ -105,38 +105,55 @@ in the frequency domain. Third, we develop a Deformable Cross-branch Fusion Atte
 
 ## Quantitative Results
 
-### Paired Benchmarks
+<details>
+<summary><b>Paired Benchmarks</b></summary>
 
 The following results are reported without the GT-Mean strategy.
 
-| Method | Dataset | PSNR | SSIM | LPIPS |
-| --- | --- | ---: | ---: | ---: |
-| Proposed GMG-Net | LOL-v1 | 24.741 | 0.866 | 0.083 |
-| Proposed GMG-Net | LOL-v2 Real | 23.696 | 0.871 | 0.109 |
-| Proposed GMG-Net | LOL-v2 Synthetic | 25.995 | 0.943 | 0.042 |
+| Dataset | PSNR | SSIM | LPIPS |
+| --- | ---: | ---: | ---: |
+| LOL-v1 | 24.741 | 0.866 | 0.083 |
+| LOL-v2 Real | 23.696 | 0.871 | 0.109 |
+| LOL-v2 Synthetic | 25.995 | 0.943 | 0.042 |
 
-### Sony Total Dark
+</details>
 
-| Method | Dataset | PSNR | SSIM | LPIPS |
-| --- | --- | ---: | ---: | ---: |
-| Proposed GMG-Net | Sony Total Dark | 22.552 | 0.677 | 0.449 |
+<details>
+<summary><b>Sony Total Dark</b></summary>
 
-### Unpaired Real-world Benchmarks
+| Dataset | PSNR | SSIM | LPIPS |
+| --- | ---: | ---: | ---: |
+| Sony Total Dark | 22.552 | 0.677 | 0.449 |
+
+</details>
+
+<details>
+<summary><b>Unpaired Real-world Benchmarks</b></summary>
 
 NIQE and BRISQUE are no-reference metrics. Lower values indicate better perceptual naturalness.
+The results on unpaired datasets are obtained by directly testing with weights trained on the LOL dataset.
 
-| Method | Metric | DICM | LIME | MEF | NPE | VV | Avg |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Proposed GMG-Net | NIQE | 3.69 | 4.14 | 3.55 | 3.75 | 3.23 | 3.67 |
-| Proposed GMG-Net | BRISQUE | 28.09 | 18.45 | 14.54 | 19.45 | 29.56 | 22.02 |
+| Metric | DICM | LIME | MEF | NPE | VV | Avg |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| NIQE | 3.69 | 4.14 | 3.55 | 3.75 | 3.23 | 3.67 |
+| BRISQUE | 28.09 | 18.45 | 14.54 | 19.45 | 29.56 | 22.02 |
 
-### Efficiency
+</details>
+
+<details>
+<summary><b>Efficiency</b></summary>
 
 Runtime is reported on an RTX 4090D with 256 x 256 input, averaged over 300 repetitions after 50 warmup iterations.
 
-| Method | Params (M) | FLOPs (G) | Runtime (ms) | FPS |
-| --- | ---: | ---: | ---: | ---: |
-| Proposed GMG-Net | 3.82 | 30.44 | 33.36 | 29.97 |
+| Params (M) | FLOPs (G) | Runtime (ms) | FPS |
+| ---: | ---: | ---: | ---: |
+| 3.82 | 30.44 | 33.36 | 29.97 |
+
+</details>
+
+## Weights
+
+All the weights that we trained on different datasets is available at [Baidu Pan](https://pan.baidu.com/s/1MyeWvcsSjFQRgwAIBYpzJw?pwd=lsjh) (code: `lsjh`).
 
 ## Requirements
 
@@ -164,6 +181,7 @@ The pinned `requirements.txt` uses `torch==2.1.2+cu121` and `torchvision==0.16.2
 ## Dataset Preparation
 
 Please organize datasets following the default paths in `data/options.py`.
+Dataset download can refer to [Fediory/HVI-CIDNet](https://github.com/Fediory/HVI-CIDNet).
 
 <details>
 <summary><b>datasets (click to expand)</b></summary>
