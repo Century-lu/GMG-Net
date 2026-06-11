@@ -181,7 +181,7 @@ The pinned `requirements.txt` uses `torch==2.1.2+cu121` and `torchvision==0.16.2
 ## Dataset Preparation
 
 Please organize datasets following the default paths in `data/options.py`.
-Dataset download can refer to [Fediory/HVI-CIDNet](https://github.com/Fediory/HVI-CIDNet).
+Dataset download can refer to [Datasets](https://github.com/Fediory/HVI-CIDNet).
 
 <details>
 <summary><b>datasets (click to expand)</b></summary>
