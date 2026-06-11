@@ -28,18 +28,17 @@ This repository contains the official implementation of **GMG-Net: Gradient-awar
 
 ## Abstract
 
-Low-light image enhancement aims to restore visually natural and structurally faithful images from scenes with insufficient and spatially varying illumination. Existing deep models often struggle with large illumination changes, which can lead to noise amplification, detail degradation, and color distortion.
-
-GMG-Net addresses these issues with a **gradient-aware mechanism** and a **mid-frequency guided mechanism**. It introduces a Gradient-aware Contextual Attention Block (GCAB) to enhance blurred edge features, a Mid-frequency Guided Multi-scale Frequency Enhancement Module (MGMFE) to adaptively modulate low- and high-frequency information, and a Deformable Cross-branch Fusion Attention (DCFA) module to align and fuse HVI-space branch features.
+Low-light image enhancement is a challenging task in image processing, aiming to restore visually natural and structurally faithful images from environments with insufficient and spatially varying illumination. Although mainstream deep learning methods have achieved notable progress, they often fail to adaptively handle regions with varying lighting conditions in scenes with large illumination changes, resulting in noise amplification, detail degradation, and color distortion. To address these issues, we propose GMG-Net, a low-light enhancement network based on a gradient-aware mechanism and a mid-frequency guided mechanism. First, we design a Gradient-aware Contextual Attention Block (GCAB). This block dynamically enhances blurred edge features in low-light images through a gradient-aware mechanism, preserving regions with clear structural information. Second, we propose a Mid-frequency Guided Multi-scale Frequency Enhancement Module (MGMFE). It uses informative mid-frequency features as guidance to adaptively modulate high- and low-frequency information 
+in the frequency domain. Third, we develop a Deformable Cross-branch Fusion Attention (DCFA) module. It dynamically aligns and fuses features between the HV-branch and I-branch within the HVI color space using deformable offset sampling. Experiments on the multiple datasets demonstrate that GMG-Net exhibits good visual and performance advantages in low-light image enhancement. Additionally, our method maintains low Params and FLOPs, making it suitable for practical applications.
 
 ## Highlights
 
-- **GCAB:** preserves edges and details while suppressing noise amplification through gradient-aware contextual attention.
-- **MGMFE:** uses informative mid-frequency features to guide frequency-domain enhancement and balance texture recovery with noise suppression.
-- **DCFA:** dynamically aligns and fuses the HV branch and I branch in HVI color space with deformable offset sampling.
-- **Effective enhancement:** achieves competitive or superior results on multiple low-light datasets.
+- Proposing GMG-Net for low-light image enhancement using gradient-aware and mid-frequency guided mechanisms.
+- Leveraging Gradient-aware Contextual Attention for edge enhancement and noise suppression.
+- Employing Mid-frequency Guided Multi-scale Frequency Enhancement for adaptive frequency-domain modulation.
+- Developing Deformable Cross-branch Fusion Attention for feature alignment and fusion.
 
-## Method
+## Proposed GMG-Net
 
 ### Overall Framework
 
@@ -66,18 +65,6 @@ GMG-Net addresses these issues with a **gradient-aware mechanism** and a **mid-f
 </p>
 
 </details>
-
-### Gradient-aware Contextual Attention Block
-
-GCAB explicitly models gradient cues so that the network can better preserve edge and texture structures during illumination correction. In the paper, the Scharr operator is adopted for gradient-aware correction.
-
-### Mid-frequency Guided Frequency Enhancement
-
-MGMFE performs multi-scale frequency analysis and uses mid-frequency components as guidance. The module adaptively adjusts illumination-related low-frequency information and detail-related high-frequency information while retaining phase stability.
-
-### Deformable Cross-branch Fusion Attention
-
-DCFA aligns and fuses features between the HV branch and I branch in HVI color space. Deformable sampling improves robustness to uneven illumination, feature distribution shifts, and local geometric variation.
 
 ## Visual Results
 
@@ -156,10 +143,7 @@ Runtime is reported on an RTX 4090D with 256 x 256 input, averaged over 300 repe
 Dependencies and installation:
 
 - PyTorch 2.1.x
-- Python 3.10 (Ubuntu 22.04)
-- CUDA 12.1
-- GPU: NVIDIA RTX 4090D 24GB
-- CPU: AMD EPYC 9754
+- Python 3.10
 
 Create conda environment:
 
