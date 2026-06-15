@@ -183,7 +183,7 @@ The pinned `requirements.txt` uses `torch==2.1.2+cu121` and `torchvision==0.16.2
 
 ## Dataset Preparation
 
-Please organize datasets following the default paths in `data/options.py`.
+Please organize the dataset according to the following path.
 Dataset download can refer to [Datasets](https://github.com/Fediory/HVI-CIDNet).
 
 <details>
@@ -193,59 +193,55 @@ Dataset download can refer to [Datasets](https://github.com/Fediory/HVI-CIDNet).
 
 ```text
 datasets/LOLdataset/
-  our485/
-    low/
-    high/
-  eval15/
-    low/
-    high/
+    our485/
+        low/
+        high/
+    eval15/
+        low/
+        high/
 ```
 
-### LOL-v2 Real
+### LOL-v2
 
 ```text
-datasets/LOLv2/Real_captured/
-  Train/
-    Low/
-    Normal/
-  Test/
-    Low/
-    Normal/
-```
-
-### LOL-v2 Synthetic
-
-```text
-datasets/LOLv2/Synthetic/
-  Train/
-    Low/
-    Normal/
-  Test/
-    Low/
-    Normal/
+datasets/LOLv2/
+    Real_captured/
+        Train/
+            Low/
+            Normal/
+        Test/
+            Low/
+            Normal/
+    Synthetic/
+        Train/
+            Low/
+            Normal/
+        Test/
+            Low/
+            Normal/
 ```
 
 ### Sony Total Dark
 
 ```text
 datasets/Sony_total_dark/
-  train/
-    short/
-    long/
-  eval/
-    short/
-    long/
+    train/
+        short/
+        long/
+    eval/
+        short/
+        long/
 ```
 
 ### Unpaired Datasets
 
 ```text
 datasets/Five unpaired datasets/
-  DICM/
-  LIME/
-  MEF/
-  NPE/
-  VV/
+    DICM/
+    LIME/
+    MEF/
+    NPE/
+    VV/
 ```
 
 </details>
