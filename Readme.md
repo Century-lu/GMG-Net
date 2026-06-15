@@ -108,7 +108,7 @@ in the frequency domain. Third, we develop a Deformable Cross-branch Fusion Atte
 <details>
 <summary><b>Paired Benchmarks</b></summary>
 
-The following results are reported without the GT-Mean strategy.
+The following table reports results both with and without the GT-Mean strategy.
 
 | Dataset | PSNR | SSIM | LPIPS |
 | --- | ---: | ---: | ---: |
