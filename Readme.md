@@ -113,8 +113,11 @@ The following results are reported without the GT-Mean strategy.
 | Dataset | PSNR | SSIM | LPIPS |
 | --- | ---: | ---: | ---: |
 | LOL-v1 | 24.741 | 0.866 | 0.083 |
+| LOL-v1 (use GT Mean) | 27.976 | 0.880 | 0.078 |
 | LOL-v2 Real | 23.696 | 0.871 | 0.109 |
+| LOL-v2 Real (use GT Mean) | 28.296 | 0.891 | 0.105 |
 | LOL-v2 Synthetic | 25.995 | 0.943 | 0.042 |
+| LOL-v2 Synthetic (use GT Mean) | 29.994 | 0.953 | 0.037 |
 
 </details>
 
