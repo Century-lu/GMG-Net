@@ -1,4 +1,4 @@
-# GMG-Net: Gradient-aware and Mid-frequency Guided Network for Low-light Image Enhancement
+# [KBS2026] GMG-Net: Gradient-aware and Mid-frequency Guided Network for Low-light Image Enhancement
 
 <p align="center">
   <a href="https://doi.org/10.1016/j.knosys.2026.116390">
