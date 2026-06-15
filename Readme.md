@@ -16,7 +16,7 @@
 
 This repository contains the official implementation of **GMG-Net: Gradient-aware and Mid-frequency Guided network for low-light image enhancement**, published in **Knowledge-Based Systems**.
 
-**Authors:** Huaping Zhou, Shiji Lu ([ORCID](https://orcid.org/0009-0001-9871-6001)), Kelei Sun, Tao Wu, Bin Deng, and Man Chen
+**Authors:** Huaping Zhou [![ORCID iD](https://orcid.org/sites/default/files/images/orcid_16x16.png)]([https://orcid.org/0009-0001-9871-6001](https://orcid.org/0000-0002-4419-0825)), Shiji Lu [![ORCID iD](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0009-0001-9871-6001), Kelei Sun [![ORCID iD](https://orcid.org/sites/default/files/images/orcid_16x16.png)]([https://orcid.org/0009-0001-9871-6001](https://orcid.org/0000-0002-3966-2031)), Tao Wu [![ORCID iD](https://orcid.org/sites/default/files/images/orcid_16x16.png)]([https://orcid.org/0009-0001-9871-6001](https://orcid.org/0000-0002-3915-4977)), Bin Deng, and Man Chen
 
 **Paper:** [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0950705126011160) | [DOI](https://doi.org/10.1016/j.knosys.2026.116390)
 
