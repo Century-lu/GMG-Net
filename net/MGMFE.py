@@ -54,6 +54,7 @@ class Enhanced_Parallel_Attention(nn.Module):
             nn.AdaptiveAvgPool2d(1),
             nn.Conv2d(dim, dim, 1),
             nn.Sigmoid()
+        )
 
 
         self.ca = nn.Sequential(
