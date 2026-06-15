@@ -90,7 +90,7 @@ if __name__ == '__main__':
     alpha = None
     if ep.lol:
         eval_data = DataLoader(dataset=get_eval_set("./datasets/LOLdataset/eval15/low"), num_workers=num_workers, batch_size=1, shuffle=False)
-        output_folder = './output/lolv1/'
+        output_folder = './output/LOLv1/'
         weight_path = './weights/LOL_V1.pth'
         
             
