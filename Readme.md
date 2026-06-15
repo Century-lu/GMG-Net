@@ -247,34 +247,6 @@ datasets/Five unpaired datasets/
 
 </details>
 
-## Training
-
-Before training, select one dataset switch in `data/options.py`. For example, to train on LOL-v1:
-
-```python
-parser.add_argument('--lol_v1', type=bool, default=True)
-parser.add_argument('--lolv2_real', type=bool, default=False)
-parser.add_argument('--lolv2_syn', type=bool, default=False)
-parser.add_argument('--SID', type=bool, default=False)
-```
-
-Then run:
-
-```bash
-python train.py
-```
-
-The paper uses the following training settings:
-
-| Dataset | Patch size | Epochs | Batch size |
-| --- | ---: | ---: | ---: |
-| LOL-v1 | 128 x 128 | 1000 | 8 |
-| LOL-v2 Synthetic | 128 x 128 | 1000 | 8 |
-| Sony Total Dark | 128 x 128 | 1000 | 8 |
-| LOL-v2 Real | 256 x 256 | 800 | 8 |
-
-Checkpoints will be saved to `weights/train/`, and validation results will be saved to `results/`.
-
 ## Evaluation
 
 Run evaluation on paired datasets:
