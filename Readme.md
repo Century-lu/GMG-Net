@@ -310,7 +310,7 @@ Enhanced images will be saved to `output/`.
 Calculate full-reference metrics:
 
 ```bash
-python measure.py
+python measure.py --lol
 ```
 
 Calculate no-reference metrics:
