@@ -24,7 +24,7 @@ This repository contains the official implementation of **GMG-Net: Gradient-awar
 
 - **2026.06.08:** The paper is available online in *Knowledge-Based Systems*.
 - **2026.06.03:** GMG-Net is accepted by *Knowledge-Based Systems*.
-- Code and evaluation scripts are released in this repository.
+- Code and evaluation scripts will be released in this repository.
 
 ## Abstract
 
