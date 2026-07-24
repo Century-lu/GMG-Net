@@ -31,25 +31,14 @@ This repository contains the official implementation of **GMG-Net: Gradient-awar
 Low-light image enhancement is a challenging task in image processing, aiming to restore visually natural and structurally faithful images from environments with insufficient and spatially varying illumination. Although mainstream deep learning methods have achieved notable progress, they often fail to adaptively handle regions with varying lighting conditions in scenes with large illumination changes, resulting in noise amplification, detail degradation, and color distortion. To address these issues, we propose GMG-Net, a low-light enhancement network based on a gradient-aware mechanism and a mid-frequency guided mechanism. First, we design a Gradient-aware Contextual Attention Block (GCAB). This block dynamically enhances blurred edge features in low-light images through a gradient-aware mechanism, preserving regions with clear structural information. Second, we propose a Mid-frequency Guided Multi-scale Frequency Enhancement Module (MGMFE). It uses informative mid-frequency features as guidance to adaptively modulate high- and low-frequency information 
 in the frequency domain. Third, we develop a Deformable Cross-branch Fusion Attention (DCFA) module. It dynamically aligns and fuses features between the HV-branch and I-branch within the HVI color space using deformable offset sampling. Experiments on the multiple datasets demonstrate that GMG-Net exhibits good visual and performance advantages in low-light image enhancement. Additionally, our method maintains low Params and FLOPs, making it suitable for practical applications.
 
-## 2. Highlights
-
-- Proposing GMG-Net for low-light image enhancement using gradient-aware and mid-frequency guided mechanisms.
-- Leveraging Gradient-aware Contextual Attention for edge enhancement and noise suppression.
-- Employing Mid-frequency Guided Multi-scale Frequency Enhancement for adaptive frequency-domain modulation.
-- Developing Deformable Cross-branch Fusion Attention for feature alignment and fusion.
-
-## 3. Proposed GMG-Net
+## 2. Proposed GMG-Net
 
 ### Overall Framework
-
-<details>
-<summary><b>Framework (click to expand)</b></summary>
 
 <p align="center">
   <img src="pic/Framework.jpg" width="900" alt="Overall Framework">
 </p>
 
-</details>
 
 ### Main Components
 
@@ -66,7 +55,7 @@ in the frequency domain. Third, we develop a Deformable Cross-branch Fusion Atte
 
 </details>
 
-## 4. Visual Results
+## 3. Visual Results
 
 <details>
 <summary><b>LOL-v1, LOL-v2-real, and LOL-v2-synthetic:</b></summary>
@@ -103,7 +92,7 @@ in the frequency domain. Third, we develop a Deformable Cross-branch Fusion Atte
 
 </details>
 
-## 5. Quantitative Results
+## 4. Quantitative Results
 
 <details>
 <summary><b>Paired Benchmarks</b></summary>
@@ -154,7 +143,7 @@ Runtime is reported on an RTX 4090D with 256 x 256 input, averaged over 300 repe
 
 </details>
 
-## 6. Citation
+## 5. Citation
 
 If you find our work useful for your research, please cite our paper:
 
@@ -172,14 +161,14 @@ If you find our work useful for your research, please cite our paper:
 }
 ```
 
-## 7. License
+## 6. License
 
 This project is released under the license provided in `LICENSE`.
 
-## 8. Contact
+## 7. Contact
 
 If you have any questions, please open an issue in this repository.
 
-## 9. Acknowledgement
+## 8. Acknowledgement
 
 We thank the authors of public low-light image enhancement datasets and related open-source projects for their valuable contributions to the community.
